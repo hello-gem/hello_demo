@@ -1,3 +1,17 @@
+GIT
+  remote: git://github.com/hello-gem/hello.git
+  revision: 8db6f0b940939de640be29c10c96a3f31bdcd491
+  specs:
+    hello (0.0.99)
+      bcrypt
+      before_actions
+      colorize
+      http_accept_language
+      nav_lynx (= 1.1.1)
+      rails-i18n
+      user_agent_parser
+      validates_email_format_of
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +51,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.2)
+    bcrypt (3.1.10)
+    before_actions (2.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -49,12 +65,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    colorize (0.7.7)
     columnize (0.9.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    http_accept_language (2.0.5)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -72,6 +90,8 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.7.0)
     multi_json (1.11.2)
+    nav_lynx (1.1.1)
+      rails (>= 3.1.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.1)
@@ -99,6 +119,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails-i18n (4.0.8)
+      i18n (~> 0.7)
+      railties (~> 4.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -138,6 +161,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    user_agent_parser (2.3.0)
+    validates_email_format_of (1.6.3)
+      i18n
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -150,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  hello!
   jbuilder (~> 2.0)
   jquery-rails
   pg

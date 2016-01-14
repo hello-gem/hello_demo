@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+gem 'hello', github: 'hello-gem/hello'
+
 #
 # HEROKU
 #
