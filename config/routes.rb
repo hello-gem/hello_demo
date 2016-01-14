@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  
+  
+  get  'onboarding' => 'onboarding#index'
+  post 'onboarding' => 'onboarding#continue'
+    
+  resources :users, only: [:index, :show] do
+    collection do
+      get 'list'
+    end
+    member do
+      post 'impersonate'
+    end
+  end
+
+  mount Hello::Engine => "/hello"
+  root to: 'root#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

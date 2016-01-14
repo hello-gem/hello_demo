@@ -1,0 +1,29 @@
+<h1>Listing Users</h1>
+
+<% if current_user && current_user.webmaster? %>
+  <p><%= link_to "View User List as a Webmaster", list_users_path %></p>
+<% end %>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Locale</th>
+      <th>Time zone</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.username, user %></td>
+        <td><%= user.name %></td>
+        <td><%= user.role %></td>
+        <td><%= user.locale %></td>
+        <td><%= user.time_zone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
